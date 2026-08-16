@@ -550,5 +550,5 @@ else if (type === "help" || type === "h") {
     pushMessage(`❌ Error: ${err.message}`);
   }
 });
-console.log("Rule34 Module initialized successfully.");
+console.log("anilist Module initialized successfully.");
 })();
