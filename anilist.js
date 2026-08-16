@@ -3,8 +3,9 @@
 // ====================
 (function () {
   // Prevent duplicate execution if re-loaded
-  if (window.__R34_BOT_INITIALIZED__) return;
-  window.__R34_BOT_INITIALIZED__ = true;
+  // anilist.js
+if (window.__ANILIST_INITIALIZED__) return;
+  window.__ANILIST_INITIALIZED__ = true;
 async function queryAniList(query, variables = {}) {
   const response = await fetch("https://graphql.anilist.co", {
     method: "POST",
