@@ -1,6 +1,10 @@
 // ====================
 // SHARED HELPER FUNCTIONS
 // ====================
+(function () {
+  // Prevent duplicate execution if re-loaded
+  if (window.__R34_BOT_INITIALIZED__) return;
+  window.__R34_BOT_INITIALIZED__ = true;
 async function queryAniList(query, variables = {}) {
   const response = await fetch("https://graphql.anilist.co", {
     method: "POST",
@@ -545,3 +549,4 @@ else if (type === "help" || type === "h") {
     pushMessage(`❌ Error: ${err.message}`);
   }
 });
+})();
