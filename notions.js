@@ -1,4 +1,7 @@
-// Wait for Perchance
+function () {
+  // Prevent duplicate execution if re-loaded
+  if (window.__NOTION_INITIALIZED__) return;
+  window.__NOTION_INITIALIZED__ = true;// Wait for Perchance
 await new Promise(r => setTimeout(r, 1000));
 
 // ===== NOTION CONFIG =====
@@ -113,3 +116,5 @@ if (typeof oc !== 'undefined' && oc.thread) {
 }
 
 console.log("✅ Notion note-saver with page body content loaded!");
+  console.log("notion Module initialized successfully.");
+})();
