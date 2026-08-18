@@ -129,3 +129,5 @@ async function interceptMangaPanel(imageInput, workerUrl = "https://spring-water
 
     return parsedData;
 }
+// At the bottom of your https://cdn.jsdelivr.net/gh/NxT206/perchance-r34-bot@latest/mangaocr.js file:
+window.interceptMangaPanel = interceptMangaPanel;
